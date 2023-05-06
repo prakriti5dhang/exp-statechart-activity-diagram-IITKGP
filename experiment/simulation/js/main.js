@@ -142,7 +142,7 @@ let liTextNodeactn = document.createTextNode("");
 newtdan.appendChild(liTextNodeactn);
 
 /**** posiiton *****/
-let newtdpID =  "pos_" +inpt1;
+/*let newtdpID =  "pos_" +inpt1;
 newtdp = document.createElement("td");
 //newula = document.createElement("ul");
 newtdp.setAttribute("id",newtdpID);
@@ -150,7 +150,7 @@ newtdp.setAttribute("id",newtdpID);
 //newtda.appendChild(newula);
 newtr.appendChild(newtdp);
 let liTextNodeactp = document.createTextNode("");
-newtdp.appendChild(liTextNodeactp);
+newtdp.appendChild(liTextNodeactp);*/
 
 let newtdr = document.createElement("td");
 newtdr.appendChild(newIconbtn);
@@ -323,8 +323,8 @@ function addbtnt3() {
 inpt3=document.getElementById("inp3").value;
 var selstatet3= document.getElementById("selectstatet3");
 var statevalt3 =selstatet3.options[selstatet3.selectedIndex].value;
-var selpos= document.getElementById("selectpost");
-var poseval =selpos.options[selpos.selectedIndex].text;
+//var selpos= document.getElementById("selectpost");
+//var poseval =selpos.options[selpos.selectedIndex].text;
 
   
 var newIconbtn = document.createElement("btn");
@@ -345,17 +345,17 @@ var paran = document.createElement("i");
 let liTextNodent = document.createTextNode(inpt3);
 paran.appendChild(liTextNodent);
 
-newuLip = document.createElement("ul");
+/*newuLip = document.createElement("ul");
 newLip = document.createElement("li");
 newuLip.setAttribute("style","list-style-type:none" );
 var parap = document.createElement("i");
 let liTextNodepos = document.createTextNode(poseval);
-parap.appendChild(liTextNodepos);
+parap.appendChild(liTextNodepos);*/
 
 newLin.appendChild(paran);
 newuLin.appendChild(newLin);
-newLip.appendChild(parap);
-newuLip.appendChild(newLip);
+//newLip.appendChild(parap);
+//newuLip.appendChild(newLip);
 //newtdan.appendChild(newIconbtn); 
 
 
@@ -363,16 +363,16 @@ newuLip.appendChild(newLip);
 if(statevalt3 == 0){
   alert("Please select a state from the dropdown list in table #3");
 }
-else if(poseval == "Select Position"){
-  alert("Please select an position!");
-}
+//else if(poseval == "Select Position"){
+//  alert("Please select an position!");
+//}
 else  if (inpt3 == "") {
     alert("Please Enter Note Before Clicking Add Button");
   } 
   
   else{
    document.getElementById("note_"+statevalt3 ).appendChild(newuLin);
-   document.getElementById("pos_"+statevalt3 ).appendChild(newuLip);
+   //document.getElementById("pos_"+statevalt3 ).appendChild(newuLip);
     
   }
   document.getElementById("inp3").value="";

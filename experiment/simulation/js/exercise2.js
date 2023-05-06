@@ -352,6 +352,7 @@ document.getElementById("inp22").value="";
 
 
 /***************************************************** Function for Table 4 ***************************************************/
+var arrparallelact=[];
 /* display input for synchronisation bar*/
 function addbtnt4(){
     document.getElementById("synchinp1").style.display="block";
@@ -457,6 +458,8 @@ function addbtnt41(){
   }
 
   else{
+    arrparallelact.push(p1valt4);
+    arrparallelact.push(p2valt4);
 let newtrt5 =document.createElement("tr");
 
 /*create td for current activity*/
