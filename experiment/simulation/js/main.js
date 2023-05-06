@@ -15,6 +15,8 @@ function subex(){
     document.getElementById("dispres").style.display="none";
     document.getElementById("show_result1").style.display="none";
     document.getElementById("show_result2").style.display="none";
+    document.getElementById("dispuml1").style.display="none";
+    document.getElementById("dispuml2").style.display="none";
     document.getElementById("dispviewbtn").disabled=true;
     document.getElementById("viewsol").disabled=true;
     
@@ -28,6 +30,8 @@ function subex(){
         document.getElementById("dispres").style.display="none";
         document.getElementById("show_result1").style.display="none";
         document.getElementById("show_result2").style.display="none";
+        document.getElementById("dispuml1").style.display="none";
+        document.getElementById("dispuml2").style.display="none";
         document.getElementById("dispviewbtn").disabled=false;
         document.getElementById("viewsol").disabled=true;
        
@@ -41,6 +45,8 @@ function subex(){
       document.getElementById("dispres").style.display="none";
       document.getElementById("show_result1").style.display="none";
       document.getElementById("show_result2").style.display="none";
+      document.getElementById("dispuml1").style.display="none";
+      document.getElementById("dispuml2").style.display="none";
       document.getElementById("dispviewbtn").disabled=false;
       document.getElementById("viewsol").disabled=true;
      
@@ -467,7 +473,7 @@ newIconbtn.appendChild(newIconbtni);
 
 function drawbtex1(){
 
- 
+  document.getElementById("dispuml1").style.display="block";
   var namespace = joint.shapes;
 
   var graph = new joint.dia.Graph({}, { cellNamespace: namespace });

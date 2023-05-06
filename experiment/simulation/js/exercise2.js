@@ -886,7 +886,7 @@ document.getElementById("synchbart6d").disabled=true;
 
 function drawbtex2(){
 
-
+  document.getElementById("dispuml2").style.display="block";
   var namespace = joint.shapes;
 
   var graph = new joint.dia.Graph({}, { cellNamespace: namespace });
@@ -991,7 +991,7 @@ function drawbtex2(){
           strokeWidth: 2
       },
       label: {
-          text: arract2[2],
+          text: arrparallelact[0],
           fill: 'black',
           fontSize: 14
       }
@@ -1022,7 +1022,7 @@ function drawbtex2(){
           strokeWidth: 2
       },
       label: {
-          text: arract2[3],
+          text: arrparallelact[1],
           fill: 'black',
           fontSize: 14
       }
