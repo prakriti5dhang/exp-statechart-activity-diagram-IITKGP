@@ -33,7 +33,7 @@ function playsimulation(){
 
 function gonextp2(){
     document.getElementById("step1").style.display="block";
-    document.getElementById("head1").innerHTML="Identify the different state of the software project";
+    document.getElementById("head1").innerHTML="1. Identify the different state of the software project";
     document.getElementById("p2").style.display="block";
     document.getElementById("p1").style.display="none";
    // document.getElementById("backbtn2").disabled=true;
@@ -73,7 +73,7 @@ function gonextp3(){
     document.getElementById("p3").style.display="block";
     document.getElementById("para3").style.display="block";
     document.getElementById("nextbtn3").style.display="none";
-    document.getElementById("head1").innerHTML="Represent activities that are performed in each state";
+    document.getElementById("head1").innerHTML="2. Represent activities that are performed in each state";
 
 }
   
@@ -128,7 +128,7 @@ function gonextp3(){
 
 function gonextp4(){
     document.getElementById("step3").style.display="block";
-    document.getElementById("head1").innerHTML="Represents transition among the states";
+    document.getElementById("head1").innerHTML="3. Represents transition among the states";
     document.getElementById("p3").style.display="none";
     document.getElementById("p31").style.display="none";
     document.getElementById("p32").style.display="none";
