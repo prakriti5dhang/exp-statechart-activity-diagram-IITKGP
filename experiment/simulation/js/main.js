@@ -63,10 +63,10 @@ function viewsolutionb(){ //submit button
     document.getElementById("viewsol").disabled=false;
     document.getElementById("dispviewbtn").disabled=true;
     if(ex.options[ex.selectedIndex].value==1){
-    window.scrollBy(0, 1800);
+    window.scrollBy(0, 2000);
     }
     if(ex.options[ex.selectedIndex].value==2){
-      window.scrollBy(0, 2800);
+      window.scrollBy(0, 4000);
     }
 
 }
