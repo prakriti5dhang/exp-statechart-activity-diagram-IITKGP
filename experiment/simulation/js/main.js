@@ -99,7 +99,7 @@ var arractivity=[];
 var arrevent=[];
 function addbtnt1(){
 inpt1=document.getElementById("inp1").value;
-arrstate.push(inpt1)
+//arrstate.push(inpt1);
 
 
   var newIconbtn = document.createElement("img");
@@ -295,7 +295,7 @@ document.getElementById("ftbl2").reset();
 
 }
 
-
+var arrstatef=[];
 function removerow(btndel) {
   if (typeof(btndel) == "object") {
      
@@ -312,6 +312,8 @@ function removerow(btndel) {
           arrstate.splice(index, 1);
         }
         console.log(arrstate);
+
+         
   } 
  
 
@@ -435,7 +437,7 @@ s1eval =sels1.options[sels1.selectedIndex].text;
     alert("Please add a transition from Initial state to one of the states in your system");
    }
   else if(s1eval==s2eval){
-alert("A system should not have any transition from Initial to itself");
+alert("A system should not have any transition from self to itself");
 }
  else if((s1eval=="Initial") && (s2eval=="Final")){
   alert("A system should not have any transition from Initial to Final");
@@ -444,6 +446,8 @@ alert("A system should not have any transition from Initial to itself");
   alert("An event is necessary for a state transition to occur! Please specify it.");
  }
 else{
+  arrstate.push(s2eval);
+  arrstatef = [...new Set(arrstate)]; //removes duplicates
  tr = document.createElement('tr');
   tr.setAttribute("id","t6st");
   document.getElementById('tbodytbt6').appendChild(tr);
@@ -549,7 +553,7 @@ function drawbtex1(){
           strokeWidth: 2
       },
       label: {
-          text: arrstate[0],
+          text: arrstatef[0],
           //text:arractivity[0],
           fill: 'black',
           fontSize: 16
@@ -590,7 +594,7 @@ function drawbtex1(){
           strokeWidth: 2
       },
       label: {
-          text: arrstate[1],
+          text: arrstatef[1],
           fill: 'black',
           fontSize: 16
       }
@@ -628,7 +632,7 @@ function drawbtex1(){
           strokeWidth: 2
       },
       label: {
-          text: arrstate[2],
+          text: arrstatef[2],
           fill: 'black',
           fontSize: 16
       }
