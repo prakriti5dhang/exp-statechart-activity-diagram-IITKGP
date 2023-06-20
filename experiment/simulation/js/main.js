@@ -112,6 +112,7 @@ arrstate.push(inpt1)
   newtdID= inpt1;
   //rbtn.appendChild(newIconbtn);   
 newtr=document.createElement("tr");
+newtr.setAttribute("data-value", inpt1)
 newtr.setAttribute("id",newtrID);
 newtd = document.createElement("td");
 newtd.setAttribute("class","statename");
@@ -239,7 +240,7 @@ selectt5b.appendChild(newOptiont5b);
 }
 
   /************************************ Function for Table 2 ********************************************/
- var inpt2;
+ var inpt2, actevnt;
   function addbtnt2() {
     
   inpt2=document.getElementById("inp2").value;
@@ -262,6 +263,7 @@ selectt5b.appendChild(newOptiont5b);
 newuLi = document.createElement("ul");
 newuLi.setAttribute("style","list-style-type:none" );
 newLi = document.createElement("li");
+newLi.setAttribute("data-value", actevnt);
 let liTextNodeact = document.createTextNode(acteval);
 let liTextNodeae = document.createTextNode(inpt2);
 newLi.appendChild(liTextNodeact);
@@ -282,7 +284,7 @@ else  if (inpt2 == "") {
   
   else{
     document.getElementById("activ_"+stateval ).appendChild(newuLi);
-    var actevnt= acteval+"/"+inpt2;
+     actevnt= acteval+"/"+inpt2;
     arractivity.push(actevnt);
     
   }
@@ -296,8 +298,20 @@ document.getElementById("ftbl2").reset();
 
 function removerow(btndel) {
   if (typeof(btndel) == "object") {
-      $(btndel).closest("tr").remove();
-      
+     
+      var listItemValue = $(btndel).closest("tr").data("value");
+        //console.log(listItemValue);
+        $(btndel).closest("tr").remove();
+       $("#selectstate").find('option[value="' + listItemValue + '"]').remove();
+       $("#selectstatet3").find('option[value="' + listItemValue + '"]').remove();
+       $("#selectstatet5a").find('option[value="' + listItemValue + '"]').remove();
+        $("#selectstatet5b").find('option[value="' + listItemValue + '"]').remove();
+
+        var index = arrstate.indexOf(listItemValue);
+        if (index !== -1) {
+          arrstate.splice(index, 1);
+        }
+        console.log(arrstate);
   } 
  
 
@@ -311,8 +325,15 @@ function removerowuc(btndel) {
 
 if (typeof(btndel) == "object") {
 
+ // var listItemValue2 = $(btndel).closest("li").data("value");
+  //console.log(listItemValue2);
     $(btndel).closest("li").remove();
-   
+
+    var index = arractivity.indexOf(actevnt);
+    if (index !== -1) {
+      arractivity.splice(index, 1);
+    }
+    console.log(arractivity);
    // x.remove(typeof(btndel));
    
 } else {

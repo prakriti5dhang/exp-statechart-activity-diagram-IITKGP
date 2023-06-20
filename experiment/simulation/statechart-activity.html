@@ -330,11 +330,11 @@ Author: Prakriti Dhang
 	<label for="prob2" class="form-label fs-5" style="color: brown; font-weight: bold;">Draw an activity diagram to graphically represent the following workflow</label>
    <p class="fs-6" style="text-align: justify;">Let us consider the development activities of SE Virtual Labs. The 
     process begins by checking out the code from Subversion repository. Necessary modifications are then made to the 
-    checked out code (local copy). Once the developer is done with his changes, the application has to be tested to 
+    <b>checked out code</b> (local copy). Once the developer is done with his <b>changes</b>, the application has to be tested to 
     verify whether the new functionality are working fine. This test has to be performed with two of the more popular 
-    web browsers: Firefox and Internet Explorer, to support cross-browser accessibility. If testing fails in at least 
+    web browsers: <b>Firefox</b> and <b>Internet Explorer</b>, to support cross-browser accessibility. If testing fails in at least 
     one of the two browser, developer goes back to his code, and fixes it. Only when all the browsers pass the test, 
-    a patch is generated from the local copy, and applied to the production code. The local copy is then committed 
+    a <b>patch is generated</b> from the local copy, and <b>applied to the production code</b>. The local copy is then <b>committed</b> 
     resulting in update of the SVN repository. Note that, if the local copy is committed before generating a patch file,
      then local changes would get registered, and one won't be further able to generate the patch file.
 
@@ -370,7 +370,7 @@ Author: Prakriti Dhang
 
 <ul>
   <li>
-    This system lets you represent at most five parallel activities
+    This system lets you represent two parallel activities
 
   </li>
   <li>
@@ -525,7 +525,7 @@ Author: Prakriti Dhang
             <option value="1">INITIAL_NODE</option>
             <option value="2">FINAL _NODE</option>
           </select>
-          <select id="parallelact3" class="form-select float-center border border-1 border-primary" aria-label="Default select example" >
+          <!--select id="parallelact3" class="form-select float-center border border-1 border-primary" aria-label="Default select example" >
             <option value="0" selected>Parallel activity #3</option>
             <option value="1">INITIAL_NODE</option>
             <option value="2">FINAL _NODE</option>
@@ -539,7 +539,7 @@ Author: Prakriti Dhang
             <option value="0" selected>Parallel activity #5</option>
             <option value="1">INITIAL_NODE</option>
             <option value="2">FINAL _NODE</option>
-          </select>
+          </select-->
         </td>
         <td class="align-middle"><button id="t41addbtn" class="btn btn-primary" type="button" onclick="addbtnt41()" ><i class="bi bi-plus-lg"></i>Add</button></td>
       </tr>
@@ -557,7 +557,7 @@ Author: Prakriti Dhang
             <option value="1">INITIAL_NODE</option>
             <option value="2">FINAL _NODE</option>
           </select>
-          <select id="parallelact3b" class="form-select float-center border border-1 border-primary" aria-label="Default select example" >
+          <!--select id="parallelact3b" class="form-select float-center border border-1 border-primary" aria-label="Default select example" >
             <option value="0" selected>Parallel activity #3</option>
             <option value="1">INITIAL_NODE</option>
             <option value="2">FINAL _NODE</option>
@@ -571,7 +571,7 @@ Author: Prakriti Dhang
             <option value="0" selected>Parallel activity #5</option>
             <option value="1">INITIAL_NODE</option>
             <option value="2">FINAL _NODE</option>
-          </select>
+          </select-->
         </td>
         
         <td class="align-middle"><select id="selnextact" class="form-select float-center border border-1 border-primary" aria-label="Default select example" >
@@ -686,7 +686,7 @@ Author: Prakriti Dhang
 </div>
 <div class="input-group mb-3">
   <span class="input-group-text">Gaurd Condition</span>
-  <input class="form-control" type="text" id="inpt6b" placeholder="True" >
+  <input class="form-control" type="text" id="inpt6b" placeholder="Test Successful" >
  
 </div>
 </div>
@@ -746,7 +746,7 @@ Author: Prakriti Dhang
 </div>
 <div class="input-group mb-3">
 <span class="input-group-text">Gaurd Condition</span>
-<input class="form-control" type="text" id="inpt6c" placeholder="False" >
+<input class="form-control" type="text" id="inpt6c" placeholder="Test Fail " >
 
 </div>
 </div>

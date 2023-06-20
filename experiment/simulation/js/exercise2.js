@@ -8,7 +8,7 @@ function addbtnt21(){
     
     }
 else{
-  arract2.push(inpt21);
+  //arract2.push(inpt21);
     /******* Creating options in table 2********/
     let newOptionIDt2a;
     newOptionIDt2a = 'newOptiont2a_' + inpt21;
@@ -86,7 +86,7 @@ newOptiont4p2.setAttribute('value',inpt21);
 let selectt4p2 = document.getElementById('parallelact2'); 
 selectt4p2.appendChild(newOptiont4p2);
 
-
+/*
 let newOptionIDt4p3;
 newOptionIDt4p3 = 'newOptiont4p3_' + inpt21;
 
@@ -127,7 +127,7 @@ newOptiont4p5.appendChild(optionTextt4p5);
 newOptiont4p5.setAttribute("id", newOptionIDt4p5);
 newOptiont4p5.setAttribute('value',inpt21);
 let selectt4p5 = document.getElementById('parallelact5'); 
-selectt4p5.appendChild(newOptiont4p5);
+selectt4p5.appendChild(newOptiont4p5);*/
 
 /******* Creating options for parallel activities of row 2 in table 4 ********/
 let newOptionIDt4pr21;
@@ -159,6 +159,7 @@ newOptiont4pr22.setAttribute('value',inpt21);
 let selectt4pr22 = document.getElementById('parallelact2b'); 
 selectt4pr22.appendChild(newOptiont4pr22);
 
+/*
 let newOptionIDt4pr23;
 newOptionIDt4pr23 = 'newOptiont4pr23_' + inpt21;
 
@@ -204,7 +205,7 @@ newOptiont4pr25.setAttribute('value',inpt21);
 let selectt4pr25 = document.getElementById('parallelact5b'); 
 selectt4pr25.appendChild(newOptiont4pr25);
 
-
+*/
 
   /******* Creating options for next state in table 4 ********/
   let newOptionIDt4b;
@@ -303,25 +304,30 @@ else if(inpt22 == ""){
 }
 else{
   /********************************************** Adding to table 3 ****************************************************/
-
+  arract2.push(actnval);
 let newtr =document.createElement("tr");
-let newtdIDc= "cact"+actcval;
+let newtdIDc= actcval;
 let newtdc= document.createElement("td");
 newtdc.setAttribute("id", newtdIDc);
 
-let newtdIDn= "nact"+actnval;
+let newtdIDn= actnval;
 let newtdn= document.createElement("td");
 newtdn.setAttribute("id", newtdIDn);
 
-let newtdIDgc= "gc"+inpt22;
+let newtdIDgc= inpt22;
 let newtdgc= document.createElement("td");
 newtdgc.setAttribute("id", newtdIDgc);
 
-
-var newIconbtn = document.createElement("img");
-newIconbtn.setAttribute("src","./images/remove.png");
-newIconbtn.setAttribute("onclick", "removerow(this)");
+var newIconbtn = document.createElement("btn");
+newIconbtn.setAttribute("type", "button");
+newIconbtn.setAttribute("class", "btn btn-danger");
+//var newIconbtn = document.createElement("img");
+//newIconbtn.setAttribute("src","./images/remove.png");
+newIconbtn.setAttribute("onclick", "removerowex2(this)");
 newIconbtn.setAttribute("style","cursor:pointer;");
+var newIconbtni = document.createElement("i");
+    newIconbtni.setAttribute("class", "bi bi-dash-circle");
+    newIconbtn.appendChild(newIconbtni);
 
 let newtdbtn= document.createElement("td");
 
@@ -349,10 +355,24 @@ document.getElementById("inp22").value="";
 
 
 
+function removerowex2(btndel) {
+  if (typeof(btndel) == "object") {
+     
+      //var listItemValue = $(btndel).closest("tr").data("value");
+        //console.log(listItemValue);
+        $(btndel).closest("tr").remove();
+        arract2.pop();
+  } 
+ 
 
+  else {
+     return false;
+  }
+}
 
 /***************************************************** Function for Table 4 ***************************************************/
 var arrparallelact=[];
+var arrnextactt4=[];
 /* display input for synchronisation bar*/
 function addbtnt4(){
     document.getElementById("synchinp1").style.display="block";
@@ -460,6 +480,7 @@ function addbtnt41(){
   else{
     arrparallelact.push(p1valt4);
     arrparallelact.push(p2valt4);
+    
 let newtrt5 =document.createElement("tr");
 
 /*create td for current activity*/
@@ -498,7 +519,7 @@ var newIconbtn = document.createElement("btn");
 newIconbtn.setAttribute("type", "button");
 newIconbtn.setAttribute("class", "btn btn-danger");
    
-newIconbtn.setAttribute("src","./images/remove.png");
+//newIconbtn.setAttribute("src","./images/remove.png");
 newIconbtn.setAttribute("onclick", "removerow(this)");
 newIconbtn.setAttribute("style","cursor:pointer;");
 
@@ -559,6 +580,7 @@ function addbtnt42(){
   }
 
   else{
+    arrnextactt4.push(actnvalt4);
     let newtrt5b =document.createElement("tr");
    
     
@@ -867,7 +889,17 @@ newtrt7.appendChild(newtdt7e);
 newtrt7.appendChild(newtdt7f);
 newtrt7.appendChild(newtdt7g);
 
-document.getElementById('tbodytbt7').appendChild(newtrt7);
+
+if((c1bvalt6.toLowerCase()=="firefox") && (synbvalt6.toLowerCase()=="merge") && (a2bvalt6.toLowerCase()=="make change")){
+  document.getElementById('tbodytbt7').appendChild(newtrt7);
+}
+else if((c1bvalt6.toLowerCase()=="internet explorer") && (synbvalt6.toLowerCase()=="merge") && (a2bvalt6.toLowerCase()=="make change")){
+  document.getElementById('tbodytbt7').appendChild(newtrt7);
+}
+else{
+  alert("not possible according to the problem statment");
+}
+
 document.getElementById('ftbl26').reset();
 document.getElementById("nextactt6").disabled=true;
 document.getElementById("syncht6a").disabled=true;
@@ -1062,7 +1094,7 @@ function drawbtex2(){
           strokeWidth: 2
       },
       label: {
-          text: arract2[4],
+          text: arrnextactt4[0],
           fill: 'black',
           fontSize: 14
       }
@@ -1082,7 +1114,7 @@ function drawbtex2(){
           strokeWidth: 2
       },
       label: {
-          text: arract2[5],
+          text: arract2[2],
           fill: 'black',
           fontSize: 14
       }
@@ -1102,7 +1134,7 @@ function drawbtex2(){
           strokeWidth: 2
       },
       label: {
-          text: arract2[6],
+          text: arract2[3],
           fill: 'black',
           fontSize: 14
       }

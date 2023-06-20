@@ -20,11 +20,11 @@ Following are the instructions specifically for this experiment:
 1. **Add states:** Identify the possible states of the system and add them through **table #1**. Type in the state name in the text box, and then press the **'Add'** button. The new state will be shown in a new row in **table #4**. The new state will also get added to all the drop down lists in the workspace that indicates state.
 2. **Internal activities of a state** can be added through **table #2**. Select the desired state from the first drop down list, select an action label from the second drop down list, type in the action expression, and then click on the **'Add'** button. The **'Activities'** column in **table #4** for the selected state would get updated accordingly.
 3. **Add state transitions:** Go to **table #5** to specify state transitions. Select the current state from the first drop down list and next state from the second drop down list. In the text box under the **'Event'** column type in the which event is causing the state transition. Similarly, type in the **'Guard Condition'** and **'Action'** in the text boxes under the respective columns. Table #6 will display the newly added state transition.
-4. **[Optional]** A note could be attached to any state through **table #3**. Please select the state from the first drop down list in the table, type in the text of the note, select a position of the note (to be displayed in the UML diagram), and click on the **'Add'** button.
+4. **[Optional]** A note could be attached to any state through **table #3**. Please select the state from the first drop down list in the table, type in the text of the note and click on the **'Add'** button.
 5. Finally, click on the **'Draw'** button to generate the UML diagram as per your specifications.
 
 **NOTE**
-The UML diagram could be generated at any point of time provided the constraints imposed by the workspace are met. Thus, you can add more states, details of a state, state transitions, and then click on the **'Draw'** button to reflect the changes. Also, any state or transition that has been wrongly specified could be removed from tables #4 and #6.
+The UML diagram is generated after adding all the states and transitions. Also, any state or transition that has been wrongly specified could be removed from tables #4 and #6.
 
 ### **Steps for Drawing Activity Diagrams**
 
