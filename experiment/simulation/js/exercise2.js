@@ -890,10 +890,10 @@ newtrt7.appendChild(newtdt7f);
 newtrt7.appendChild(newtdt7g);
 
 
-if((c1bvalt6.toLowerCase()=="firefox") && (synbvalt6.toLowerCase()=="merge") && (a2bvalt6.toLowerCase()=="make change")){
+if((c1bvalt6.toLowerCase()=="firefox") && (synbvalt6.toLowerCase()=="merge") && (a2bvalt6.toLowerCase()=="changes")){
   document.getElementById('tbodytbt7').appendChild(newtrt7);
 }
-else if((c1bvalt6.toLowerCase()=="internet explorer") && (synbvalt6.toLowerCase()=="merge") && (a2bvalt6.toLowerCase()=="make change")){
+else if((c1bvalt6.toLowerCase()=="internet explorer") && (synbvalt6.toLowerCase()=="merge") && (a2bvalt6.toLowerCase()=="changes")){
   document.getElementById('tbodytbt7').appendChild(newtrt7);
 }
 else{
