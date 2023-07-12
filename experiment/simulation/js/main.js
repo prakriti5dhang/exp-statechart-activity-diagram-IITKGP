@@ -240,7 +240,7 @@ selectt5b.appendChild(newOptiont5b);
 }
 
   /************************************ Function for Table 2 ********************************************/
- var inpt2, actevnt;
+ var inpt2, actevnt,lengthact;
   function addbtnt2() {
     
   inpt2=document.getElementById("inp2").value;
@@ -286,6 +286,7 @@ else  if (inpt2 == "") {
     document.getElementById("activ_"+stateval ).appendChild(newuLi);
      actevnt= acteval+"/"+inpt2;
     arractivity.push(actevnt);
+    lengthact=arractivity.length;
     
   }
 
@@ -411,7 +412,7 @@ else  if (inpt3 == "") {
 /********************************************************** Function for Table 5 *****************************************************************/
 
 
-var sels1,s1eval,sels2,s2eval;
+var sels1,s1eval,sels2,s2eval,lenstate,lenevent;
 
 function addbtnt5(){
     let inpt4, inpt5, inpt6;
@@ -420,6 +421,7 @@ function addbtnt5(){
 
 inpt4=document.getElementById("inp4").value;
 arrevent.push(inpt4);
+lenevent=arrevent.length;
 //console.log(arrevent);
 inpt5=document.getElementById("inp5").value;
 inpt6=document.getElementById("inp6").value;
@@ -448,6 +450,9 @@ alert("A system should not have any transition from self to itself");
 else{
   arrstate.push(s2eval);
   arrstatef = [...new Set(arrstate)]; //removes duplicates
+  //console.log(arrstatef);
+  lenstate = arrstatef.length;
+  
  tr = document.createElement('tr');
   tr.setAttribute("id","t6st");
   document.getElementById('tbodytbt6').appendChild(tr);
@@ -497,8 +502,27 @@ newIconbtn.appendChild(newIconbtni);
 
 
 function drawbtex1(){
+  
+  if((lengthact == 3)  && (lenstate == 4) &&(lenevent == 6) ){
 
-  document.getElementById("dispuml1").style.display="block";
+    document.getElementById('dispuml1').style.display = "block";
+  } 
+  else if((lengthact != 3)){
+    alert("Enter the activities for each state");
+    document.getElementById('dispuml1').style.display = "none";
+  }
+
+  else if((lenstate != 4)){
+    alert("Enter all possible state transiiton in the table");
+    document.getElementById('dispuml1').style.display = "none";
+  }
+  else if (lenevent != 6) {
+    alert("Enter the event for state transiiton in the table");
+    document.getElementById('dispuml1').style.display = "none";
+  }
+ // document.getElementById("dispuml1").style.display="block";
+
+
   var namespace = joint.shapes;
 
   var graph = new joint.dia.Graph({}, { cellNamespace: namespace });

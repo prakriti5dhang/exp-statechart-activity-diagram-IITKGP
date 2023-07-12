@@ -918,7 +918,22 @@ document.getElementById("synchbart6d").disabled=true;
 
 function drawbtex2(){
 
-  document.getElementById("dispuml2").style.display="block";
+  if((lengthact == 3)  && (lenstate == 4)  ){
+
+    document.getElementById('dispuml2').style.display = "block";
+  } 
+  else if((lengthact != 3)){
+    alert("Enter the activities for each state");
+    document.getElementById('dispuml2').style.display = "none";
+  }
+
+  else if((lenstate != 4)){
+    alert("Enter all possible state transiiton in the table");
+    document.getElementById('dispuml2').style.display = "none";
+  }
+ 
+
+  //document.getElementById("dispuml2").style.display="block";
   var namespace = joint.shapes;
 
   var graph = new joint.dia.Graph({}, { cellNamespace: namespace });
